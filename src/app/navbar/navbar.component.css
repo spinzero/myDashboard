@@ -1,0 +1,120 @@
+.mat-sidenav-content {
+  overflow-x: hidden;
+}
+
+/*******************************************************************************
+
+ Sidenav  + header&footer
+
+ ******************************************************************************/
+
+.example-container {
+  position: absolute;
+  top: var(--hdr_ftr_h);
+  bottom: var(--hdr_ftr_h);
+  left: 0;
+  right: 0;
+}
+
+.example-sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  background: rgba(255, 0, 0, 0.5);
+}
+
+.example-header {
+  position: fixed;
+  top: var(--hdr_ftr_h);
+  left: 0;
+  right: 0;
+}
+
+.example-footer {
+  position: fixed;
+  bottom: var(--hdr_ftr_h);
+  left: 0;
+  right: 0;
+}
+
+
+
+/******************************************************************************
+
+  ANIMATED ICON (from scratch)
+
+  ****************************************************************************/
+
+  .container {
+      display: inline-block;
+      cursor: pointer;
+  }
+
+  .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+  }
+
+  .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {opacity: 0;}
+
+  .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+
+/*******************************************************************************
+
+  ANIMATED ICON : https://stackoverflow.com/questions/38072064/hamburger-icon-animation-using-md-icon-tag
+
+*******************************************************************************/
+
+$text-color: #FFBC00;
+$background-color: #212121;
+
+* {
+  outline: none;
+}
+/**/
+ng-md-icon {
+  fill: black;
+  -webkit-transition: fill 750ms ease-in-out;
+  -moz-transition: fill 750ms ease-in-out;
+  -o-transition: fill 750ms ease-in-out;
+  transition: fill 750ms ease-in-out;
+}
+ng-md-icon > svg {
+  -webkit-transition: width 750ms ease-in-out, height 750ms ease-in-out;
+  -moz-transition: width 750ms ease-in-out, height 750ms ease-in-out;
+  -o-transition: width 750ms ease-in-out, height 750ms ease-in-out;
+  transition: width 750ms ease-in-out, height 750ms ease-in-out;
+}
+/*
+body {
+  padding: 20px;
+  overflow: hidden;
+  background: $background-color;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}*/
+
+svg path {
+  fill: $text-color;
+}
+
+ng-md-icon svg {
+  cursor: pointer;
+}
